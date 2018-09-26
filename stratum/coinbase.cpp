@@ -265,7 +265,7 @@ void coinbase_create(YAAMP_COIND *coind, YAAMP_JOB_TEMPLATE *templ, json_value *
 else if(strcmp(coind->symbol, "HXX") == 0) {
         char script_payee[1024];
 
-        bool znode_masternode_enabled = json_get_bool(json_result, "bznode_payments_started");
+        bool znode_masternode_enabled = json_get_bool(json_result, "xnode_payments_started");
         if (znode_masternode_enabled == true) {
             json_value* znode_masternode = json_get_object(json_result, "xnode");
             const char *payee = json_get_string(znode_masternode, "payee");
