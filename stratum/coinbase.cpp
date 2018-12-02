@@ -250,10 +250,10 @@ void coinbase_create(YAAMP_COIND *coind, YAAMP_JOB_TEMPLATE *templ, json_value *
 
 
             base58_decode("XWfdnGbXnBxeegrPJEvnYaNuwf6DXCruMX", script_payee);
-            job_pack_tx(coind, templ->coinb2, 6.75 * 100000000, script_payee);
+            job_pack_tx(coind, templ->coinb2, 7.5 * 100000000, script_payee);
 
             base58_decode("XQ4WEZTFP83gVhhLBKavwopz7U84JucR8w", script_payee);
-            job_pack_tx(coind, templ->coinb2, 2.25 * 100000000, script_payee);
+            job_pack_tx(coind, templ->coinb2, 1.5 * 100000000, script_payee);
 
 
             strcat(templ->coinb2, "00000000"); // locktime
