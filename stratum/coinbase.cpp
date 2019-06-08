@@ -283,14 +283,14 @@ else if(strcmp(coind->symbol, "GXX") == 0) {
     json_int_t amount = json_get_int(znode_masternode, "amount");
     if (payee && amount) {
       //debuglog("xnode payee: %s\n", payee);
-      strcat(templ->coinb2, "07");
+      strcat(templ->coinb2, "08");
       job_pack_tx(coind, templ->coinb2, available, NULL);
 
       base58_decode(payee, script_payee);
       job_pack_tx(coind, templ->coinb2, amount, script_payee);
     }
   } else {
-    strcat(templ->coinb2, "06");
+    strcat(templ->coinb2, "07");
     job_pack_tx(coind, templ->coinb2, available, NULL);
   }
 
