@@ -238,34 +238,22 @@ else if(strcmp(coind->symbol, "BZX") == 0) {
     json_int_t amount = json_get_int(znode_masternode, "amount");
     if (payee && amount) {
       //debuglog("bznode payee: %s\n", payee);
-      strcat(templ->coinb2, "08");
+      strcat(templ->coinb2, "04");
       job_pack_tx(coind, templ->coinb2, available, NULL);
 
       base58_decode(payee, script_payee);
       job_pack_tx(coind, templ->coinb2, amount, script_payee);
     }
   } else {
-    strcat(templ->coinb2, "07");
+    strcat(templ->coinb2, "03");
     job_pack_tx(coind, templ->coinb2, available, NULL);
   }
 
   base58_decode("XWfdnGbXnBxeegrPJEvnYaNuwf6DXCruMX", script_payee);
-  job_pack_tx(coind, templ->coinb2, 14.5 * 100000000, script_payee);
+  job_pack_tx(coind, templ->coinb2, 11.5 * 100000000, script_payee);
 
   base58_decode("XJQPk2Et74hqc5R4qhHA33mSLoXk91K5vS", script_payee);
-  job_pack_tx(coind, templ->coinb2, 5 * 100000000, script_payee);
-
-  base58_decode("XJVgSxsxWDFKnrwtRd3LTf7K3cZuFM2CF6", script_payee);
-  job_pack_tx(coind, templ->coinb2, 1 * 100000000, script_payee);
-
-  base58_decode("XZVbVRp43HBgVEVTSPfyPD9vkFSQpfYSaV", script_payee);
-  job_pack_tx(coind, templ->coinb2, 0.5 * 100000000, script_payee);
-
-  base58_decode("XXeBq9aGEjin8er6QCKyMevp6PNFWgiSby", script_payee);
-  job_pack_tx(coind, templ->coinb2, 7 * 100000000, script_payee);
-
-  base58_decode("XTh9P3ji4N1ReMLD2bUUUY9QG8qA99afjc", script_payee);
-  job_pack_tx(coind, templ->coinb2, 3 * 100000000, script_payee);
+  job_pack_tx(coind, templ->coinb2, 11.5 * 100000000, script_payee);
 
   strcat(templ->coinb2, "00000000"); // locktime
   coind->reward = (double)available/100000000*coind->reward_mul;
@@ -283,34 +271,22 @@ else if(strcmp(coind->symbol, "GXX") == 0) {
     json_int_t amount = json_get_int(znode_masternode, "amount");
     if (payee && amount) {
       //debuglog("xnode payee: %s\n", payee);
-      strcat(templ->coinb2, "08");
+      strcat(templ->coinb2, "04");
       job_pack_tx(coind, templ->coinb2, available, NULL);
 
       base58_decode(payee, script_payee);
       job_pack_tx(coind, templ->coinb2, amount, script_payee);
     }
   } else {
-    strcat(templ->coinb2, "07");
+    strcat(templ->coinb2, "03");
     job_pack_tx(coind, templ->coinb2, available, NULL);
   }
 
   base58_decode("HNikz22Sw2VqMar8oPhznKEHaDqyjbxzGS", script_payee);
-  job_pack_tx(coind, templ->coinb2, 2.0 * 100000000, script_payee);
+  job_pack_tx(coind, templ->coinb2, 2.5 * 100000000, script_payee);
 
   base58_decode("HEEuJBoRMA7B6vsBG8G6EFRdpC6HacSkVq", script_payee);
-  job_pack_tx(coind, templ->coinb2, 1.3 * 100000000, script_payee);
-
-  base58_decode("HRn1h7cwPekX1T2uUFAxrE9GtzJedx3FLs", script_payee);
-  job_pack_tx(coind, templ->coinb2, 0.8 * 100000000, script_payee);
-
-  base58_decode("HSg33EurnbGit3oZGkgRddffxCwkaxECsW", script_payee);
-  job_pack_tx(coind, templ->coinb2, 0.3 * 100000000, script_payee);
-
-  base58_decode("HB35YBC6Z5WFBUvNNZibUGkoAT1PmokEuc", script_payee);
-  job_pack_tx(coind, templ->coinb2, 0.3 * 100000000, script_payee);
-
-  base58_decode("HHWox7bdL6Q3mS2rJNfwWkrtVrnzcknsXQ", script_payee);
-  job_pack_tx(coind, templ->coinb2, 0.3 * 100000000, script_payee);
+  job_pack_tx(coind, templ->coinb2, 2.5 * 100000000, script_payee);
 
   strcat(templ->coinb2, "00000000"); // locktime
   coind->reward = (double)available/100000000*coind->reward_mul;
