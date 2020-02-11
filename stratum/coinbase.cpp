@@ -282,11 +282,11 @@ else if(strcmp(coind->symbol, "GXX") == 0) {
     job_pack_tx(coind, templ->coinb2, available, NULL);
   }
 
-  base58_decode("HNikz22Sw2VqMar8oPhznKEHaDqyjbxzGS", script_payee);
-  job_pack_tx(coind, templ->coinb2, 2.5 * 100000000, script_payee);
+  base58_decode("HU9t1QEp5J8udekCqFUEajD5TeigPqtfDZ", script_payee);
+  job_pack_tx(coind, templ->coinb2, 2 * 100000000, script_payee);
 
-  base58_decode("HEEuJBoRMA7B6vsBG8G6EFRdpC6HacSkVq", script_payee);
-  job_pack_tx(coind, templ->coinb2, 2.5 * 100000000, script_payee);
+  base58_decode("HLFmojjH6qLBTh5EXtbY9j9v4BCkNpmt95", script_payee);
+  job_pack_tx(coind, templ->coinb2, 1.5 * 100000000, script_payee);
 
   strcat(templ->coinb2, "00000000"); // locktime
   coind->reward = (double)available/100000000*coind->reward_mul;
